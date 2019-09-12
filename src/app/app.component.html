@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <ul class="list-group" *ngFor="let personne of personnes">
+      <app-child [nom]="[personne.nom]" [prenom]="[personne.prenom]"
+      (Afficher)="onShow($event)"></app-child>
+    </ul>
+  </div>
+  <p>Vous avez cliquert sur: {{ personne }} </p>
+</div>
+
+<router-outlet></router-outlet>
